@@ -90,9 +90,9 @@ def can_update_multiple_items_at_once
 end
 
 def can_destroy_a_single_item
-  new_movie = Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
-  movie = new_movie.find_by(title: "That One Where the Guy Kicks Another Guy Once")
-  movie.delete
+  Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
+  movie = Movie.find_by(title: "That One Where the Guy Kicks Another Guy Once")
+  movie.destroy
 end
 
 def can_destroy_all_items_at_once
